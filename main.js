@@ -27,10 +27,27 @@ function setup() {
             }
         }
     }
+    // capture();
 }
 
 function draw() {
-    // background(51);
+    render();
+    cnt++;
+    if(cnt > 8000){
+        noLoop();
+        cnt = 0;
+    }
+}
+
+
+function capture(){
+    for(let loop = 0; loop < 8000; loop++ ){
+        render();
+    }
+    saveCanvas(canvas, "canvas", "png");
+}
+
+function render(){
     calcNextFields();
 
     loadPixels();
@@ -48,14 +65,7 @@ function draw() {
     updatePixels();
 
     swap();
-    cnt++;
-    if(cnt > 10000){
-        noLoop();
-        saveCanvas(canvas, "canvas", "png");
-        cnt = 0;
-    }
 }
-
 
 // RD Algorithm from Here
 
