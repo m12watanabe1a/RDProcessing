@@ -1,2 +1,2 @@
-# rd_processing
+# RDProcessing
 Reaction and Diffusion Algorithm By Processing
