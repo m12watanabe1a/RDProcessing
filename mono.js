@@ -2,8 +2,13 @@ const dt = 1.0;
 const Du = 0.2;
 const Dv = 0.1;
 
-const c1 = 0.046;
-const c2 = 0.063;
+// キリン模様
+const c1 = 0.082;
+const c2 = 0.059;
+
+// 線の模様
+// const c1 = 0.046;
+// const c2 = 0.063;
 
 var canvas;
 var cnt = 0;
@@ -27,7 +32,7 @@ function setup() {
             }
         }
     }
-    // capture();
+    capture();
 }
 
 function draw() {
