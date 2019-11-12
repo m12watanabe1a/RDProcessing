@@ -2,13 +2,38 @@ const dt = 1.0;
 const Du = 0.2;
 const Dv = 0.1;
 
-// キリン模様
-const c1 = 0.082;
-const c2 = 0.059;
+// キリン
+// const c1 = 0.082;
+// const c2 = 0.059;
 
-// 線の模様
-// const c1 = 0.046;
-// const c2 = 0.063;
+// 模様
+const c1 = 0.046;
+const c2 = 0.063;
+
+// 線
+// const c1 = 0.046
+// const c2 = 0.063
+
+// 線・ドット
+// const c1 = 0.034
+// const c2 = 0.0618
+
+// ドット
+// const c1 = 0.014
+// const c2 = 0.054
+
+// 大きなドット
+// const c1 = 0.0353
+// const c2 = 0.0566
+
+// 細胞
+// const c1= 0.030
+// const c2 = 0.063
+
+// 波
+// const c1 = 0.0159
+// const c2 = 0.045
+
 
 var canvas;
 var cnt = 0;
@@ -32,18 +57,25 @@ function setup() {
             }
         }
     }
-    capture();
+    // capture();
 }
 
 function draw() {
     render();
     cnt++;
-    if(cnt > 8000){
+    // if( cnt % 100 == 0){
+    //     imagecnd = int(cnt / 100);
+    //     saveCanvas(canvas, "canvas" + zeroPadding(imagecnd, 3), "png");
+    // }
+    if(cnt > 16000){
         noLoop();
         cnt = 0;
     }
 }
 
+function zeroPadding(num,length){
+    return ('0000000000' + num).slice(-length);
+}
 
 function capture(){
     for(let loop = 0; loop < 8000; loop++ ){
@@ -79,7 +111,7 @@ var field = []
 var field_next = []
 
 function initialize() {
-    canvas = createCanvas(200, 200);
+    canvas = createCanvas(640, 480);
     pixelDensity(1);
     initFields();
 }
