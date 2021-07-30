@@ -2,7 +2,7 @@
 Reaction and Diffusion Algorithm By Processing
 
 
-![preview](https://github.com/m12watanabe1a/RDProcessing/blob/master/anime.gif)
+![preview](https://github.com/m12watanabe1a/RDProcessing/blob/main/anime.gif)
 
 You can play with Reaction and Deffusion Equation by openning index.html file.
 
